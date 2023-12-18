@@ -1,0 +1,21 @@
+.contenedor{
+    width: 180px;
+    height: 724px;
+    border-right: 1px solid #D7E8FB;
+    margin-top: 0px;
+    padding-top: 40px;
+    background-color: #F7F7F7;
+   
+}
+.contenedorItems{
+    margin-top: 100px;
+}
+.items{
+    list-style: none;
+    margin-top: 20px;
+}
+.enlacesItems{
+    color: black;
+    font-size: 19px;
+    text-decoration: none;
+}

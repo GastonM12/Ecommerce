@@ -1,0 +1,12 @@
+.contenedorNavBar{
+    height: 68px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    background-color: #F7F7F7;
+    color: black;
+    -webkit-box-shadow: 49px -48px 100px 0px rgba(0,0,0,0.67); 
+    box-shadow: 49px -48px 100px 0px rgba(0,0,0,0.67);
+}
