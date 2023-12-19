@@ -1,16 +1,11 @@
 .boton {
-  width: 105px;
-  height: 29px;
-  margin-left: 20px;
-  margin-right: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: black;
-  background-color: white;
-  border: 0px solid transparent;
-  border-radius: 10px;
+  width: 90px;
+  height: 25px;
+  border-radius: 5px;
+  border: 2px solid #92c5a6;
+  background-color: #a8d5ba;
 }
 .boton:hover {
   cursor: pointer;
+  background-color: #5bc485;
 }

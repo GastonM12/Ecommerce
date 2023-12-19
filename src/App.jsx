@@ -2,6 +2,7 @@ import SideBar from "./componentes/SideBar/SideBar";
 import Clase from "./App.module.css";
 import NavBar from "./componentes/NavBar/NavBar";
 import Contador from "./componentes/Contador/Contador";
+import ItemsListContainer from "./componentes/ItemsListContainer/ItemsListContainer";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       </div>
       <div className={Clase.contenedorPrincipal}>
         <NavBar />
+        <ItemsListContainer greeting={"Bienvenidos"} />
         <div className={Clase.contenedorProductos}>
           <Contador
             inicio={1}

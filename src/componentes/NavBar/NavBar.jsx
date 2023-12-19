@@ -1,15 +1,15 @@
-import CarritoDeCompras from "../CarritoDeCompras/CarritoDeCompras";
-import Boton from "../Boton/Boton";
-import Clase from "./NavBar.module.css"
-function NavBar(){
-    return(
+import CarritoDeCompras from "../CardWidget/CarritoDeCompras";
+import Boton from "../BotonConEnlace/BotonConEnlace";
+import Clase from "./NavBar.module.css";
+function NavBar() {
+  return (
     <>
-    <nav className={Clase.contenedorNavBar}>
+      <nav className={Clase.contenedorNavBar}>
         <img src="" alt="" />
-       <CarritoDeCompras/>
-       <Boton msj="Iniciar Sesion" />
-    </nav>
+        <CarritoDeCompras />
+        <Boton msj="Iniciar Sesion" clase="boton" />
+      </nav>
     </>
-)
+  );
 }
 export default NavBar;

@@ -34,38 +34,5 @@ function Contador(propiedades) {
     </div>
   );
 }
-// function Contador({inicio,stock,onAdd}) {
-//   let [contador, setContador] = useState(inicio);
-//   const sumar = () => {
-//     if (contador < stock) {
-//       setContador(contador + 1);
-//     }
-//   };
-//   const restar = () => {
-//     if (contador > inicio) {
-//       setContador(contador - 1);
-//     }
-//   };
-
-//   return (
-//     <div className={Clase.contenedor}>
-//       <div className={Clase.contenedorBotones}>
-//         <button className={Clase.boton} onClick={restar}>
-//           -
-//         </button>
-//         <h2 className={Clase.contador}>{contador}</h2>
-//         <button className={Clase.boton} onClick={sumar}>
-//           +
-//         </button>
-//       </div>
-//       <button
-//         className={Clase.botonAgregar}
-//         onClick={() => onAdd(contador)}
-//       >
-//         Agregar al carrito
-//       </button>
-//     </div>
-//   );
-// }
 
 export default Contador;

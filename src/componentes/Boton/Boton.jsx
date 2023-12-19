@@ -1,10 +1,10 @@
 import Clase from "./Boton.module.css";
-function Boton(nombre) {
+const Boton = (propiedades) => {
   return (
     <>
-      <a className={Clase.boton}>{nombre.msj}</a>
+      <button className={Clase.boton}>{propiedades.greeting}</button>
     </>
   );
-}
+};
 
 export default Boton;
