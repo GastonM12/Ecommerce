@@ -8,7 +8,7 @@ const ListDetails = ({ nombre, imagen, precio, stock, descripcion }) => {
       <img className={Clase.imagen} src={imagen} />
       <div className={Clase.contenedorDescripcion}>
         <h2 className={Clase.nombre}>{nombre}</h2>
-        <h3 className={Clase.precio}> {descripcion}</h3>
+        <h5 className={Clase.precio}> {descripcion}</h5>
         <h3 className={Clase.precio}> Precio: ${precio}</h3>
         <h3 className={Clase.stock}> Stock Disponible: {stock}</h3>
         <ItemCount
