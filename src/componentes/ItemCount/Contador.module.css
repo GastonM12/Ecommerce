@@ -1,14 +1,4 @@
-.contenedor {
-  margin: 20px;
-  width: 200px;
-  height: 320px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 8px;
-  border: 1px solid black;
-}
+
 .contenedorBotones {
   display: flex;
   align-items: center;

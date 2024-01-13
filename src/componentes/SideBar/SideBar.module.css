@@ -1,10 +1,12 @@
 .contenedor {
   width: 180px;
   height: 724px;
+  position: fixed;
   border-right: 1px solid #d7e8fb;
   margin-top: 0px;
   padding-top: 40px;
   background-color: #f7f7f7;
+  z-index: 3;
 }
 .contenedorItems {
   margin-top: 100px;
@@ -27,5 +29,8 @@ nav ul ul {
   transition: 0.6s;
 }
 nav ul li:hover ul {
-  height: 80px;
+  height: 85px;
+}
+.itemsSubMenu{
+  margin-top: 4px;
 }

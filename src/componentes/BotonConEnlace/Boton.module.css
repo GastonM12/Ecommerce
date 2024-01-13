@@ -1,4 +1,25 @@
 .boton {
+  width: 90px;
+  height: 25px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 2px solid #92c5a6;
+  background-color: #a8d5ba;
+}
+.boton:hover {
+  cursor: pointer;
+  background-color: #5bc485;
+}
+.botonSideBar {
+  color: black;
+  font-size: 19px;
+  text-decoration: none;
+}
+.botonSideBar:hover {
+  cursor: pointer;
+}
+.botonIniciarSesion {
   width: 105px;
   height: 29px;
   margin-left: 20px;
@@ -10,15 +31,5 @@
   background-color: white;
   border: 0px solid transparent;
   border-radius: 10px;
-}
-.boton:hover {
-  cursor: pointer;
-}
-.botonSideBar {
-  color: black;
-  font-size: 19px;
   text-decoration: none;
-}
-.botonSideBar:hover {
-  cursor: pointer;
 }

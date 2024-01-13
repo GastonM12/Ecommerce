@@ -23,3 +23,7 @@
   align-items: center;
   flex-wrap: wrap;
 }
+.error{
+  margin-top: 300px;
+ text-align: center;
+}

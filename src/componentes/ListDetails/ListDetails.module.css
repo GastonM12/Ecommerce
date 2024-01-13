@@ -1,0 +1,43 @@
+.contenedor {
+  margin-bottom: 150px;
+  width: 900px;
+  height: 500px;
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 9px;
+  -webkit-box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.4);
+}
+.imagen {
+  width: 350px;
+  height: 400px;
+  margin-left: 60px;
+}
+.precio{
+    margin-bottom: 0px;
+}
+.contenedorDescripcion {
+    margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.btn{
+    width: 150px;
+    height: 30px;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    margin: 9px;
+    border-radius: 5px;
+    border: 2px solid #92c5a6;
+    background-color: #a8d5ba;
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+.btn:hover{
+  background-color: #65aa80;
+}
