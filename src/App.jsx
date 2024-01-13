@@ -27,8 +27,7 @@ function App() {
               path="/detalle/:productId"
               element={<ItemsDetailContainer />}
             />
-              <Route
-            
+            <Route
               path="*"
               element={<h1 className={Clase.error}>404 not found</h1>}
             />
