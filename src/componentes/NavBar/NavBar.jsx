@@ -9,7 +9,9 @@ function NavBar() {
       <nav className={Clase.contenedorNavBar}>
         <img src="" alt="" />
         <CarritoDeCompras />
-        <NavLink className={ClaseBtn.botonIniciarSesion} >Iniciar Sesion</NavLink>
+        <NavLink className={ClaseBtn.botonIniciarSesion}>
+          Iniciar Sesion
+        </NavLink>
       </nav>
     </>
   );
