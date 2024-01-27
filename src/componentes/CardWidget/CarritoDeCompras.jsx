@@ -1,10 +1,14 @@
 import Clase from "./CarritoDeCompras.module.css";
 import Imagen from "./asset/carrito.png";
+import { UseCart } from "../../context/cartContext";
+
 function CarritoDeCompras() {
+  const { totalQuantity } = UseCart();
+
   return (
     <div className={Clase.contenedorCarritoDeCompra}>
       <img className={Clase.imagenCarritoDeCompra} src={Imagen} alt="" />
-      <p className={Clase.carritoDeCompraCantidad}>0</p>
+      {totalQuantity}
     </div>
   );
 }

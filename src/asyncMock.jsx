@@ -5,6 +5,7 @@ const productos = [
     precio: "100000",
     categoria: "celular",
     stock: 4,
+    favorite:false,
     imagen:
       "https://http2.mlstatic.com/D_NQ_NP_2X_799027-MLA47776845273_102021-F.webp",
     descripcion:
@@ -16,6 +17,7 @@ const productos = [
     precio: "100000",
     categoria: "celular",
     stock: 3,
+    favorite:false,
     imagen:
       "https://http2.mlstatic.com/D_NQ_NP_2X_811341-MLU72749128339_112023-F.webp",
     descripcion:
@@ -27,6 +29,7 @@ const productos = [
     precio: "100000",
     categoria: "celular",
     stock: 9,
+    favorite:false,
     imagen:
       "https://http2.mlstatic.com/D_NQ_NP_2X_731654-MLU72925329555_112023-F.webp",
     descripcion:
@@ -38,6 +41,7 @@ const productos = [
     precio: "100000",
     categoria: "celular",
     stock: 9,
+    favorite:false,
     imagen:
       "https://http2.mlstatic.com/D_NQ_NP_2X_763167-MLA41813090445_052020-F.webp",
     descripcion:
@@ -49,6 +53,7 @@ const productos = [
     precio: "108900",
     categoria: "tablet",
     stock: 6,
+    favorite:false,
     imagen:
       "https://http2.mlstatic.com/D_NQ_NP_2X_807417-MLU70505355390_072023-F.webp",
     descripcion:
@@ -60,6 +65,7 @@ const productos = [
     precio: "100000",
     categoria: "notebook",
     stock: 2,
+    favorite:false,
     imagen:
       "https://http2.mlstatic.com/D_NQ_NP_2X_903166-MLA71396206475_082023-F.webp",
     descripcion:
@@ -71,6 +77,7 @@ const productos = [
     precio: "180500",
     categoria: "notebook",
     stock: 9,
+    favorite:false,
     imagen:
       "https://http2.mlstatic.com/D_NQ_NP_2X_918976-MLU72748272045_112023-F.webp",
     descripcion:
@@ -86,11 +93,13 @@ export const getProductos = () => {
 };
 export const getProductosById = (productoId) => {
   return new Promise((resolve) => {
-    resolve(
-      productos.find((product) => {
-        return product.id === productoId;
-      })
-    );
+    setTimeout(()=>{
+      resolve(
+        productos.find((product) => {
+          return product.id === productoId;
+        })
+      );
+    },1000)
   });
 };
 export const getProductosCategori = (productoCategori) => {

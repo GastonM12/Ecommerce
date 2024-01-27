@@ -3,8 +3,9 @@
   background-color: white;
 }
 
-.seccionPrincipal {
+.container {
   width: 100%;
+  min-height: 750px;
   display: flex;
   flex-direction: row;
 }
@@ -21,9 +22,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   flex-wrap: wrap;
 }
 .error {
   margin-top: 300px;
   text-align: center;
+}
+.footer{
+  width: 100%;
+  z-index: 15;
 }

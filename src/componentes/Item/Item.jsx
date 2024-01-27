@@ -1,7 +1,23 @@
+
 import Clase from "./Item.module.css";
 import { Link } from "react-router-dom";
 
-const Item = ({ id, img, nombre, precio }) => {
+const Item = ({ id, img, nombre, precio, }) => {
+
+ 
+const handleAddFav=()=>{
+
+  const objFav = {
+    id,
+    img,
+    nombre,
+    precio,
+    favorite:true
+  }
+  addFav(objFav)
+
+}
+
   return (
     <div className={Clase.contenedor}>
       <img className={Clase.img} src={img} />
