@@ -1,20 +1,14 @@
 .contenedor{
-    margin-top: 200px;
     text-align: center;
+    margin-top: 200px;
 }
-.contenedorSecundario {
+.contenedorSecundario{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.titulo{
-    margin-top: -100px;
-}
 .icono{
     width: 70px;
     height: 70px;
-}
-.limpiarCarrito{
-    
 }

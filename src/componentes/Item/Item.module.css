@@ -4,13 +4,19 @@
   border-radius: 20px;
   margin: 20px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+ 
+
   -webkit-box-shadow: 0px 5px 17px 1px rgba(0, 0, 0, 0.42);
   box-shadow: 0px 5px 17px 1px rgba(0, 0, 0, 0.42);
 }
-
+.contenedorSecundario{
+  width: 390px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .img {
   width: 200px;
   height: 300px;
@@ -31,4 +37,11 @@
 .boton:hover {
   cursor: pointer;
   background-color: #5bc485;
+}
+.icono{
+  width: 28px;
+  height: 28px;
+  margin-top: 20px;
+  margin-right: 25px;
+  color: rgb(255, 255, 36);
 }

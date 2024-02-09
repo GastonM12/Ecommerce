@@ -40,3 +40,12 @@
 .btn:hover {
   background-color: #65aa80;
 }
+.icono{
+  width: 35px;
+  height: 35px;
+  margin-left: 45px;
+}
+.titulo{
+  font-size: 30px;
+  margin-bottom: -0px;
+}

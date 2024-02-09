@@ -1,30 +1,23 @@
-import { getDoc, doc } from "firebase/firestore";
-import { db } from "../../service/firebase/firebaseConfig";
-import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ListDetails from "../ListDetails/ListDetails";
 import Loader from "../Loader/Loader";
-import { CartContext, UseCart } from "../../context/cartContext";
+import { useAsync } from "../../hooks/useAsync";
+import { getProductsById } from "../../service/firebase/firestore/products";
+import Swal from "sweetalert2";
 
 const ItemsDetailContainer = () => {
-  const [detalle, setDetalle] = useState({});
   const { productId } = useParams();
-  const { loading, setLoading } = UseCart(CartContext);
 
-  useEffect(() => {
-    setLoading(true);
+  const asyncFuncion = () => getProductsById(productId);
 
-    const prodAdapterId = doc(db, "productos", productId);
-
-    getDoc(prodAdapterId)
-      .then((queryDocumentSnapshot) => {
-        const field = queryDocumentSnapshot.data();
-        const prodAdapte = { id: queryDocumentSnapshot.id, ...field };
-        setDetalle(prodAdapte);
-      })
-      .finally(() => setLoading(false));
-  }, [productId]);
-
+  const { data: detalle, loading, error } = useAsync(asyncFuncion, [productId]);
+ if(error){
+  Swal.fire({
+    icon: "error",
+    title: "Oops...",
+    text: "Ocurrio un error",
+  })  
+ }
   return (
     <>
       {loading ? (

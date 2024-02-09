@@ -1,5 +1,5 @@
 import Clase from './CartItems.module.css'
-
+import { MdDeleteOutline } from "react-icons/md";
 const CartItems = ({prod,callback}) => {
 
   return (
@@ -9,7 +9,7 @@ const CartItems = ({prod,callback}) => {
    <h4 className={Clase.cantidad}>cantidad: {prod.quantity}</h4>
    <h4 className={Clase.precio}> precio por unidad: ${prod.precio}</h4>
    <h3 className={Clase.precio}>Total ${prod.precio * prod.quantity}</h3>
-   <button onClick={()=>callback(prod)}>Eliminar</button>
+   <button onClick={()=>callback(prod)}><MdDeleteOutline/></button>
   </div>
   )
 };

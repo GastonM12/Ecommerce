@@ -1,7 +1,9 @@
 import Item from "../Item/Item";
 import Clase from "./ListItems.module.css";
 
+
 const ListItems = ({ productos }) => {
+ 
   return (
     <div className={Clase.contenedor}>
       {productos.map((element) => {
@@ -12,6 +14,7 @@ const ListItems = ({ productos }) => {
             nombre={element.nombre}
             img={element.imagen}
             precio={element.precio}
+            descripcion={element.descripcion}
           />
         );
       })}

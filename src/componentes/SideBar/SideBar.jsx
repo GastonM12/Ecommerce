@@ -5,7 +5,7 @@ import Imagen from '../Preloader/asset/logo.png'
 import { LiaShoppingBagSolid } from "react-icons/lia";
 import { IoHomeOutline,IoHelp } from "react-icons/io5";
 import { TbCategoryPlus } from "react-icons/tb";
-
+import { FaRegStar } from "react-icons/fa";
 function SideBar() {
   return (
     <>
@@ -43,8 +43,8 @@ function SideBar() {
             </NavLink>
           </li>
           <li className={Clase.items}>
-            <NavLink className={ClaseBtn.botonSideBar} to="/ayuda">
-             <IoHelp/> Ayuda
+            <NavLink className={ClaseBtn.botonSideBar} to="/favoritos">
+             < FaRegStar/> Favoritos
             </NavLink>
           </li>
         </ul>

@@ -7,8 +7,14 @@ function CarritoDeCompras() {
 
   return (
     <div className={Clase.contenedorCarritoDeCompra}>
-      <img className={Clase.imagenCarritoDeCompra} src={Imagen} alt="" />
-      {totalQuantity}
+      {totalQuantity === 0 ? (
+        <img className={Clase.imagenCarritoDeCompra} src={Imagen} alt="" />
+      ) : (
+        <>
+          <img className={Clase.imagenCarritoDeCompra} src={Imagen} alt="" />
+          {totalQuantity}
+        </>
+      )}
     </div>
   );
 }

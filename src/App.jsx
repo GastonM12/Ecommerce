@@ -10,6 +10,8 @@ import Cart from "./componentes/Cart/Cart";
 import Preloader from "./componentes/Preloader/Preloader";
 import Footer from "./componentes/Footer/Footer";
 import Checkout from "./componentes/Checkout/Checkout";
+import ItemContainerFavorite from "./componentes/ItemsFavoriteContainer/ItemsContainerFavorite";
+
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -35,7 +37,7 @@ function App() {
                     <Route
                       path="/"
                       element={<ItemsListContainer greeting={"Productos"} />}
-                    />{" "}
+                    />
                     <Route
                       path="/categori/:categoriId"
                       element={<ItemsListContainer greeting={"Productos"} />}
@@ -45,6 +47,7 @@ function App() {
                       element={<ItemsDetailContainer />}
                     />
                     <Route path="/cart" element={<Cart />} />
+                    <Route path="/favoritos" element={<ItemContainerFavorite />} />
                     <Route path="/checkout" element={<Checkout />} />
                     <Route
                       path="*"

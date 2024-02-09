@@ -1,10 +1,23 @@
 import { createContext, useContext, useState } from "react";
-
+import Swal from "sweetalert2";
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [search, setSearch] = useState([]);
+  const [fav, setFav] = useState([]);
+
+  const Toast = Swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.onmouseenter = Swal.stopTimer;
+      toast.onmouseleave = Swal.resumeTimer;
+    },
+  });
 
   const addItems = (productToAdd) => {
     if (!isInCart(productToAdd.id)) {
@@ -31,34 +44,69 @@ export const CartProvider = ({ children }) => {
 
   const ClearCart = (productToAdd) => {
     if (isInCart(productToAdd.id)) {
-      const newcart = cart.filter((prod) => prod.id !== productToAdd.id);
-      return setCart(newcart);
+      Swal.fire({
+        title: "Estas seguro?",
+        text: "No podrás revertir esto.!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Eliminar del carrito",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire({
+            title: "¡Eliminado!",
+            text: "El producto ha sido eliminado",
+            icon: "success",
+          });
+          const newcart = cart.filter((prod) => prod.id !== productToAdd.id);
+          return setCart(newcart);
+        }
+      });
     }
   };
 
   const totalQuantity = getTotalQuantity();
 
-  const getTotal = ()=>{
+  const getTotal = () => {
     let acc = 0;
 
     cart.forEach((prod) => (acc += prod.quantity * prod.precio));
     return acc;
- 
- return acc
- }
- const total = getTotal()
+  };
+  const total = getTotal();
+
+  const addFav = (prod) => {
+    if (!isItFav(prod.id)) {
+      setFav((prev) => [...prev, prod]);
+      Toast.fire({
+        icon: "success",
+        title: "Se agrego correctamente a la lista de favoritos",
+      });
+    } else {
+      const newCart = fav.filter((producto) => producto.id !== prod.id);
+      return setFav(newCart);
+    }
+  };
+  const isItFav = (id) => {
+    return fav.some((prod) => prod.id === id);
+  };
+
   return (
     <CartContext.Provider
       value={{
         cart,
+        setCart,
         addItems,
         isInCart,
         removeItems,
         totalQuantity,
         ClearCart,
-        loading,
-        setLoading,
+        search,
+        setSearch,
         total,
+        addFav,
+        fav,
       }}
     >
       {children}
