@@ -11,13 +11,13 @@ const ItemsDetailContainer = () => {
   const asyncFuncion = () => getProductsById(productId);
 
   const { data: detalle, loading, error } = useAsync(asyncFuncion, [productId]);
- if(error){
-  Swal.fire({
-    icon: "error",
-    title: "Oops...",
-    text: "Ocurrio un error",
-  })  
- }
+  if (error) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Ocurrio un error",
+    });
+  }
   return (
     <>
       {loading ? (

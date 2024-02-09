@@ -1,9 +1,7 @@
 import Item from "../Item/Item";
 import Clase from "./ListItems.module.css";
 
-
 const ListItems = ({ productos }) => {
- 
   return (
     <div className={Clase.contenedor}>
       {productos.map((element) => {

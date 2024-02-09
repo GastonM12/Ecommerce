@@ -7,29 +7,30 @@ import { FiShoppingBag } from "react-icons/fi";
 import Swal from "sweetalert2";
 
 const Cart = () => {
-  const { cart, totalQuantity, ClearCart, total, setCart } = UseCart(CartContext);
+  const { cart, totalQuantity, ClearCart, total, setCart } =
+    UseCart(CartContext);
 
- const limpiarCarrito = ()=>{
-  Swal.fire({
-    title: "Estas seguro?",
-    text: "Quieres eliminar los productos del carrito?",
-    icon: "warning",
-    showCancelButton: true,
-    confirmButtonColor: "#3085d6",
-    cancelButtonColor: "#d33",
-    confirmButtonText: "Eliminar productos",
-  }).then((result) => {
-    if (result.isConfirmed) {
-      Swal.fire({
-        title: "¡Eliminado!",
-        text: "Se han eliminado todos los productos",
-        icon: "success",
-      });
-      
-      return setCart([]);
-    }
-  });
- }
+  const limpiarCarrito = () => {
+    Swal.fire({
+      title: "Estas seguro?",
+      text: "Quieres eliminar los productos del carrito?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Eliminar productos",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "¡Eliminado!",
+          text: "Se han eliminado todos los productos",
+          icon: "success",
+        });
+
+        return setCart([]);
+      }
+    });
+  };
 
   return (
     <div className={Clase.contenedor}>
@@ -53,7 +54,9 @@ const Cart = () => {
             {" "}
             <Boton greeting={"Terminar Compra"} />{" "}
           </Link>
-          <button className={Clase.limpiarCarrito} onClick={limpiarCarrito}>limpiar carrito</button>
+          <button className={Clase.limpiarCarrito} onClick={limpiarCarrito}>
+            limpiar carrito
+          </button>
         </div>
       )}
     </div>

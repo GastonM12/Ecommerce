@@ -24,7 +24,7 @@ const Item = ({ id, img, nombre, precio, descripcion }) => {
   return (
     <div className={Clase.contenedor}>
       <div className={Clase.contenedorSecundario}>
-        <img className={Clase.img} src={img} alt={nombre}/>
+        <img className={Clase.img} src={img} alt={nombre} />
         <h3 className={Clase.nom}>{nombre}</h3>
         <h3 className={Clase.pre}>${precio}</h3>
 

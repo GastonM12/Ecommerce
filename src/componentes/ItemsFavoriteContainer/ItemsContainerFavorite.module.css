@@ -1,14 +1,14 @@
-.contenedor{
-    text-align: center;
-    margin-top: 200px;
+.contenedor {
+  text-align: center;
+  margin-top: 200px;
 }
-.contenedorSecundario{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.contenedorSecundario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.icono{
-    width: 70px;
-    height: 70px;
+.icono {
+  width: 70px;
+  height: 70px;
 }

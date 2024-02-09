@@ -1,14 +1,14 @@
-.contenedor{
-    width: 400px;
+.contenedor {
+  width: 400px;
 }
-.imagen{
-    width: 150px;
-    height: 170px;
+.imagen {
+  width: 150px;
+  height: 170px;
 }
-.span{
- width: 250px;
- height: 2px;
- margin: 20px;
- margin-left: 80px;
- background-color: rgb(141, 141, 141);
+.span {
+  width: 250px;
+  height: 2px;
+  margin: 20px;
+  margin-left: 80px;
+  background-color: rgb(141, 141, 141);
 }
